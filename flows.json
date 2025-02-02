@@ -8,18 +8,278 @@
         "env": []
     },
     {
-        "id": "757a03c66a6422e6",
-        "type": "rpi-gpio out",
-        "z": "2d8bb5b72c867347",
-        "name": "",
-        "pin": "27",
-        "set": "",
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "bcm": true,
-        "x": 220,
-        "y": 120,
+        "id": "d445d260.887a2",
+        "type": "tab",
+        "label": "Relay Demo",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e20f16a4.627318",
+        "type": "RelayJ2",
+        "z": "d445d260.887a2",
+        "name": "Relay J2 at Top",
+        "x": 640,
+        "y": 80,
         "wires": []
+    },
+    {
+        "id": "3523ad5c.eb6d32",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "e20f16a4.627318"
+            ]
+        ]
+    },
+    {
+        "id": "85c106e7.6370a8",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 330,
+        "y": 60,
+        "wires": [
+            [
+                "e20f16a4.627318"
+            ]
+        ]
+    },
+    {
+        "id": "830cd5fa.7f6fd8",
+        "type": "RelayJ3",
+        "z": "d445d260.887a2",
+        "name": "",
+        "x": 620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3f7960a3.fd9d9",
+        "type": "RelayJ4",
+        "z": "d445d260.887a2",
+        "name": "",
+        "x": 620,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1330a95f.7753b7",
+        "type": "RelayJ5",
+        "z": "d445d260.887a2",
+        "name": "Relay J5 at Bottom",
+        "x": 650,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a63eab5a.daf578",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "830cd5fa.7f6fd8"
+            ]
+        ]
+    },
+    {
+        "id": "e0c647cc.665058",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "830cd5fa.7f6fd8"
+            ]
+        ]
+    },
+    {
+        "id": "ad95f1a9.134e3",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "set",
+        "payloadType": "str",
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "3f7960a3.fd9d9"
+            ]
+        ]
+    },
+    {
+        "id": "67e5e44d.345f3c",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "reset",
+        "payloadType": "str",
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "3f7960a3.fd9d9"
+            ]
+        ]
+    },
+    {
+        "id": "5d7bc4cc.9c9cfc",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "1330a95f.7753b7"
+            ]
+        ]
+    },
+    {
+        "id": "6ef75fc1.9684a",
+        "type": "inject",
+        "z": "d445d260.887a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "1330a95f.7753b7"
+            ]
+        ]
     }
 ]
