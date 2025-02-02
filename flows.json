@@ -1,1 +1,25 @@
-[]
+[
+    {
+        "id": "2d8bb5b72c867347",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "757a03c66a6422e6",
+        "type": "rpi-gpio out",
+        "z": "2d8bb5b72c867347",
+        "name": "",
+        "pin": "27",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 220,
+        "y": 120,
+        "wires": []
+    }
+]
