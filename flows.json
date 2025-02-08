@@ -11,7 +11,7 @@
         "type": "RelayJ2",
         "z": "d445d260.887a2",
         "name": "Relay J2 at Top",
-        "x": 640,
+        "x": 860,
         "y": 80,
         "wires": []
     },
@@ -34,8 +34,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "off",
-        "payloadType": "str",
+        "payload": "false",
+        "payloadType": "bool",
         "x": 330,
         "y": 100,
         "wires": [
@@ -63,13 +63,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "on",
-        "payloadType": "str",
+        "payload": "true",
+        "payloadType": "bool",
         "x": 330,
         "y": 60,
         "wires": [
             [
-                "e20f16a4.627318"
+                "de493ad0aa4f1ae9"
             ]
         ]
     },
@@ -78,7 +78,7 @@
         "type": "RelayJ3",
         "z": "d445d260.887a2",
         "name": "",
-        "x": 620,
+        "x": 840,
         "y": 180,
         "wires": []
     },
@@ -87,7 +87,7 @@
         "type": "RelayJ4",
         "z": "d445d260.887a2",
         "name": "",
-        "x": 620,
+        "x": 840,
         "y": 280,
         "wires": []
     },
@@ -96,7 +96,7 @@
         "type": "RelayJ5",
         "z": "d445d260.887a2",
         "name": "Relay J5 at Bottom",
-        "x": 650,
+        "x": 870,
         "y": 380,
         "wires": []
     },
@@ -119,13 +119,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
-        "payloadType": "num",
+        "payload": "true",
+        "payloadType": "bool",
         "x": 330,
         "y": 160,
         "wires": [
             [
-                "830cd5fa.7f6fd8"
+                "de493ad0aa4f1ae9"
             ]
         ]
     },
@@ -148,8 +148,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "0",
-        "payloadType": "num",
+        "payload": "false",
+        "payloadType": "bool",
         "x": 330,
         "y": 200,
         "wires": [
@@ -271,6 +271,23 @@
         "wires": [
             [
                 "1330a95f.7753b7"
+            ]
+        ]
+    },
+    {
+        "id": "de493ad0aa4f1ae9",
+        "type": "BooleanLogic",
+        "z": "d445d260.887a2",
+        "name": "",
+        "operation": "XOR",
+        "inputCount": "4",
+        "topic": "result",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "e20f16a4.627318",
+                "830cd5fa.7f6fd8"
             ]
         ]
     }
