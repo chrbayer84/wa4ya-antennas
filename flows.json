@@ -280,7 +280,7 @@
         "z": "d445d260.887a2",
         "name": "",
         "operation": "XOR",
-        "inputCount": "4",
+        "inputCount": "2",
         "topic": "result",
         "x": 620,
         "y": 140,
