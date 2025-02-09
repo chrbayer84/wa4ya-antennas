@@ -282,8 +282,18 @@
         "y": 40,
         "wires": [
             [
-                "830cd5fa.7f6fd8"
+                "830cd5fa.7f6fd8",
+                "898aca7ec961c4f2"
             ]
         ]
+    },
+    {
+        "id": "898aca7ec961c4f2",
+        "type": "BDebug",
+        "z": "d445d260.887a2",
+        "name": "Debug",
+        "x": 770,
+        "y": 40,
+        "wires": []
     }
 ]
