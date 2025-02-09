@@ -33,10 +33,10 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "fandipole",
         "payload": "false",
         "payloadType": "bool",
-        "x": 330,
+        "x": 360,
         "y": 100,
         "wires": [
             [
@@ -62,14 +62,14 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "fandipole",
         "payload": "true",
         "payloadType": "bool",
-        "x": 330,
+        "x": 350,
         "y": 60,
         "wires": [
             [
-                "de493ad0aa4f1ae9"
+                "a52f4489e9f95e55"
             ]
         ]
     },
@@ -118,14 +118,14 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "vertical",
         "payload": "true",
         "payloadType": "bool",
-        "x": 330,
+        "x": 350,
         "y": 160,
         "wires": [
             [
-                "de493ad0aa4f1ae9"
+                "a52f4489e9f95e55"
             ]
         ]
     },
@@ -147,10 +147,10 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "vertical",
         "payload": "false",
         "payloadType": "bool",
-        "x": 330,
+        "x": 350,
         "y": 200,
         "wires": [
             [
@@ -275,33 +275,35 @@
         ]
     },
     {
-        "id": "de493ad0aa4f1ae9",
-        "type": "BooleanLogic",
+        "id": "a52f4489e9f95e55",
+        "type": "switch",
         "z": "d445d260.887a2",
         "name": "",
-        "operation": "OR",
-        "inputCount": "2",
-        "topic": "result",
-        "x": 550,
-        "y": 140,
-        "wires": [
-            [
-                "325abe7971ecaa5b"
-            ]
-        ]
-    },
-    {
-        "id": "325abe7971ecaa5b",
-        "type": "Invert",
-        "z": "d445d260.887a2",
-        "name": "Invert",
-        "x": 690,
-        "y": 140,
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "fandipole",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "vertical",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 590,
+        "y": 40,
         "wires": [
             [
                 "e20f16a4.627318",
                 "830cd5fa.7f6fd8"
-            ]
+            ],
+            []
         ]
     }
 ]
