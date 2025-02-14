@@ -10,9 +10,9 @@
         "id": "e20f16a4.627318",
         "type": "RelayJ2",
         "z": "d445d260.887a2",
-        "name": "Relay J2 at Top",
-        "x": 980,
-        "y": 60,
+        "name": "Relay J2",
+        "x": 960,
+        "y": 80,
         "wires": []
     },
     {
@@ -36,11 +36,11 @@
         "topic": "vertical",
         "payload": "false",
         "payloadType": "bool",
-        "x": 340,
+        "x": 330,
         "y": 240,
         "wires": [
             [
-                "e20f16a4.627318"
+                "3f7960a3.fd9d9"
             ]
         ]
     },
@@ -66,7 +66,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 330,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "dcd49b4aefbe7fae",
@@ -78,17 +78,17 @@
         "id": "830cd5fa.7f6fd8",
         "type": "RelayJ3",
         "z": "d445d260.887a2",
-        "name": "",
-        "x": 980,
-        "y": 180,
+        "name": "Relay J3 fandipole",
+        "x": 970,
+        "y": 200,
         "wires": []
     },
     {
         "id": "3f7960a3.fd9d9",
         "type": "RelayJ4",
         "z": "d445d260.887a2",
-        "name": "",
-        "x": 880,
+        "name": "Relay J4 Vertical",
+        "x": 970,
         "y": 280,
         "wires": []
     },
@@ -96,7 +96,7 @@
         "id": "1330a95f.7753b7",
         "type": "RelayJ5",
         "z": "d445d260.887a2",
-        "name": "Relay J5 at Bottom",
+        "name": "Relay J5 deltaloop",
         "x": 910,
         "y": 380,
         "wires": []
@@ -123,7 +123,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 350,
-        "y": 60,
+        "y": 40,
         "wires": [
             [
                 "bd7d886ef1b0b04d",
@@ -210,7 +210,7 @@
         "topic": "deltaloop",
         "payload": "false",
         "payloadType": "bool",
-        "x": 360,
+        "x": 350,
         "y": 400,
         "wires": [
             [
@@ -228,8 +228,8 @@
         "wires": [
             [
                 "830cd5fa.7f6fd8",
-                "3f7960a3.fd9d9",
-                "4dc7a9dd875e4f12"
+                "4dc7a9dd875e4f12",
+                "e20f16a4.627318"
             ]
         ]
     },
@@ -238,7 +238,7 @@
         "type": "Invert",
         "z": "d445d260.887a2",
         "name": "Invert",
-        "x": 590,
+        "x": 610,
         "y": 40,
         "wires": [
             [
