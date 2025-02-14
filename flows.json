@@ -11,7 +11,7 @@
         "type": "RelayJ2",
         "z": "d445d260.887a2",
         "name": "Relay J2 at Top",
-        "x": 900,
+        "x": 980,
         "y": 60,
         "wires": []
     },
@@ -33,11 +33,11 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "fandipole",
+        "topic": "vertical",
         "payload": "false",
         "payloadType": "bool",
-        "x": 360,
-        "y": 100,
+        "x": 340,
+        "y": 240,
         "wires": [
             [
                 "e20f16a4.627318"
@@ -62,15 +62,15 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "fandipole",
+        "topic": "vertical",
         "payload": "true",
         "payloadType": "bool",
-        "x": 350,
-        "y": 60,
+        "x": 330,
+        "y": 200,
         "wires": [
             [
                 "dcd49b4aefbe7fae",
-                "e20f16a4.627318"
+                "3f7960a3.fd9d9"
             ]
         ]
     },
@@ -79,7 +79,7 @@
         "type": "RelayJ3",
         "z": "d445d260.887a2",
         "name": "",
-        "x": 880,
+        "x": 980,
         "y": 180,
         "wires": []
     },
@@ -119,11 +119,11 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "vertical",
+        "topic": "fandipole",
         "payload": "true",
         "payloadType": "bool",
         "x": 350,
-        "y": 160,
+        "y": 60,
         "wires": [
             [
                 "bd7d886ef1b0b04d",
@@ -149,11 +149,11 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "vertical",
+        "topic": "fandipole",
         "payload": "false",
         "payloadType": "bool",
         "x": 350,
-        "y": 200,
+        "y": 100,
         "wires": [
             [
                 "830cd5fa.7f6fd8"
@@ -223,8 +223,8 @@
         "type": "Invert",
         "z": "d445d260.887a2",
         "name": "Invert",
-        "x": 610,
-        "y": 40,
+        "x": 590,
+        "y": 180,
         "wires": [
             [
                 "830cd5fa.7f6fd8",
@@ -239,7 +239,7 @@
         "z": "d445d260.887a2",
         "name": "Invert",
         "x": 590,
-        "y": 140,
+        "y": 40,
         "wires": [
             [
                 "e20f16a4.627318",
