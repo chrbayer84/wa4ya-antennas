@@ -601,8 +601,31 @@
         "type": "BDebug",
         "z": "22ba10e510af9575",
         "name": "Debug",
-        "x": 430,
-        "y": 120,
+        "x": 410,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "99eca3afac980af3",
+        "type": "interval-multiples-timer",
+        "z": "22ba10e510af9575",
+        "interval": "15000",
+        "payload": "",
+        "topic": "",
+        "name": "",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c46f73fe54b317a",
+        "type": "BDebug",
+        "z": "22ba10e510af9575",
+        "name": "Debug",
+        "x": 410,
+        "y": 140,
         "wires": []
     }
 ]
