@@ -565,49 +565,11 @@
         ]
     },
     {
-        "id": "bc4286017b6f3ebc",
-        "type": "timerswitch",
-        "z": "22ba10e510af9575",
-        "name": "2nd/odd 15s",
-        "ontopic": "",
-        "offtopic": "",
-        "onpayload": "",
-        "offpayload": "",
-        "disabled": false,
-        "schedules": [
-            {
-                "on_h": "-1",
-                "on_m": "-1",
-                "on_s": "14",
-                "off_h": "-1",
-                "off_m": "-1",
-                "off_s": "29",
-                "valid": false
-            },
-            {
-                "on_h": "-1",
-                "on_m": "-1",
-                "on_s": "44",
-                "off_h": "-1",
-                "off_m": "-1",
-                "off_s": "59",
-                "valid": false
-            }
-        ],
-        "x": 370,
-        "y": 60,
-        "wires": [
-            [
-                "96e0daa1d55ca79f"
-            ]
-        ]
-    },
-    {
         "id": "96e0daa1d55ca79f",
         "type": "debug",
         "z": "22ba10e510af9575",
         "name": "debug 1",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -617,20 +579,6 @@
         "x": 660,
         "y": 60,
         "wires": []
-    },
-    {
-        "id": "6be17b767e3dede8",
-        "type": "BooleanLogic",
-        "z": "22ba10e510af9575",
-        "name": "",
-        "operation": "AND",
-        "inputCount": 2,
-        "topic": "result",
-        "x": 240,
-        "y": 140,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8698e6135e9dd58f",
@@ -657,8 +605,28 @@
         "y": 80,
         "wires": [
             [
-                "bc4286017b6f3ebc"
+                "55e0a6ffcda0af04"
             ]
+        ]
+    },
+    {
+        "id": "55e0a6ffcda0af04",
+        "type": "timer-node",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "topic": "",
+        "timer": "15",
+        "payloadOn": "true",
+        "payloadOnType": "bool",
+        "payloadOff": "false",
+        "payloadOffType": "bool",
+        "x": 370,
+        "y": 80,
+        "wires": [
+            [
+                "96e0daa1d55ca79f"
+            ],
+            []
         ]
     }
 ]
