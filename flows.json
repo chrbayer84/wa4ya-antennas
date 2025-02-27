@@ -626,7 +626,25 @@
             [
                 "96e0daa1d55ca79f"
             ],
-            []
+            [
+                "a3681a5746a2f823"
+            ]
         ]
+    },
+    {
+        "id": "a3681a5746a2f823",
+        "type": "debug",
+        "z": "22ba10e510af9575",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 120,
+        "wires": []
     }
 ]
