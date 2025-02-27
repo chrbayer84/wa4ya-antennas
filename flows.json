@@ -7,6 +7,22 @@
         "info": ""
     },
     {
+        "id": "22ba10e510af9575",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cc75296e115d15d4",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
         "id": "e20f16a4.627318",
         "type": "RelayJ2",
         "z": "d445d260.887a2",
@@ -274,6 +290,374 @@
         "wires": [
             [
                 "1330a95f.7753b7"
+            ]
+        ]
+    },
+    {
+        "id": "e04c3614f0bd06da",
+        "type": "RelayJ2",
+        "z": "22ba10e510af9575",
+        "name": "Relay J2",
+        "x": 1100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "06f9ccb8186ecc8a",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "vertical",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "41c64b95a9b74f41"
+            ]
+        ]
+    },
+    {
+        "id": "86bad108a7951c83",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "vertical",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "c350cfec3683dbce",
+                "41c64b95a9b74f41"
+            ]
+        ]
+    },
+    {
+        "id": "fe96e5f9dd7d4bf0",
+        "type": "RelayJ3",
+        "z": "22ba10e510af9575",
+        "name": "Relay J3 fandipole",
+        "x": 1110,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "41c64b95a9b74f41",
+        "type": "RelayJ4",
+        "z": "22ba10e510af9575",
+        "name": "Relay J4 Vertical",
+        "x": 1110,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2061fa9ebcedba9c",
+        "type": "RelayJ5",
+        "z": "22ba10e510af9575",
+        "name": "Relay J5 deltaloop",
+        "x": 1050,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "89f91081c3818613",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fandipole",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "77013c0938b0150a",
+                "fe96e5f9dd7d4bf0"
+            ]
+        ]
+    },
+    {
+        "id": "38f1e0d543d2edd2",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fandipole",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 490,
+        "y": 260,
+        "wires": [
+            [
+                "fe96e5f9dd7d4bf0"
+            ]
+        ]
+    },
+    {
+        "id": "3138110fb1b94f25",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "deltaloop",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 490,
+        "y": 520,
+        "wires": [
+            [
+                "43fc83697d558881"
+            ]
+        ]
+    },
+    {
+        "id": "f56c15e7f9d1a580",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "deltaloop",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "68b54d86a1d5ef23"
+            ]
+        ]
+    },
+    {
+        "id": "c350cfec3683dbce",
+        "type": "Invert",
+        "z": "22ba10e510af9575",
+        "name": "Invert",
+        "x": 730,
+        "y": 340,
+        "wires": [
+            [
+                "fe96e5f9dd7d4bf0",
+                "68b54d86a1d5ef23",
+                "e04c3614f0bd06da"
+            ]
+        ]
+    },
+    {
+        "id": "77013c0938b0150a",
+        "type": "Invert",
+        "z": "22ba10e510af9575",
+        "name": "Invert",
+        "x": 750,
+        "y": 200,
+        "wires": [
+            [
+                "e04c3614f0bd06da",
+                "41c64b95a9b74f41",
+                "68b54d86a1d5ef23"
+            ]
+        ]
+    },
+    {
+        "id": "43fc83697d558881",
+        "type": "Invert",
+        "z": "22ba10e510af9575",
+        "name": "Invert",
+        "x": 750,
+        "y": 500,
+        "wires": [
+            [
+                "2061fa9ebcedba9c",
+                "41c64b95a9b74f41",
+                "fe96e5f9dd7d4bf0",
+                "e04c3614f0bd06da"
+            ]
+        ]
+    },
+    {
+        "id": "68b54d86a1d5ef23",
+        "type": "Invert",
+        "z": "22ba10e510af9575",
+        "name": "Invert",
+        "x": 750,
+        "y": 560,
+        "wires": [
+            [
+                "2061fa9ebcedba9c"
+            ]
+        ]
+    },
+    {
+        "id": "bc4286017b6f3ebc",
+        "type": "timerswitch",
+        "z": "22ba10e510af9575",
+        "name": "2nd/odd 15s",
+        "ontopic": "",
+        "offtopic": "",
+        "onpayload": "",
+        "offpayload": "",
+        "disabled": false,
+        "schedules": [
+            {
+                "on_h": "-1",
+                "on_m": "-1",
+                "on_s": "14",
+                "off_h": "-1",
+                "off_m": "-1",
+                "off_s": "29",
+                "valid": false
+            },
+            {
+                "on_h": "-1",
+                "on_m": "-1",
+                "on_s": "44",
+                "off_h": "-1",
+                "off_m": "-1",
+                "off_s": "59",
+                "valid": false
+            }
+        ],
+        "x": 370,
+        "y": 60,
+        "wires": [
+            [
+                "96e0daa1d55ca79f"
+            ]
+        ]
+    },
+    {
+        "id": "96e0daa1d55ca79f",
+        "type": "debug",
+        "z": "22ba10e510af9575",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "6be17b767e3dede8",
+        "type": "BooleanLogic",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "operation": "AND",
+        "inputCount": 2,
+        "topic": "result",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8698e6135e9dd58f",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "bc4286017b6f3ebc"
             ]
         ]
     }
