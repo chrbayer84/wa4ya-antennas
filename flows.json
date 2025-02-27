@@ -576,56 +576,39 @@
         "y": 60,
         "wires": [
             [
-                "49860a3082c2c5c9"
+                "8947972b820dbc88"
             ]
         ]
-    },
-    {
-        "id": "03521aaab27cfc69",
-        "type": "debug",
-        "z": "22ba10e510af9575",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "49860a3082c2c5c9",
         "type": "BDebug",
         "z": "22ba10e510af9575",
         "name": "Debug",
-        "x": 410,
+        "x": 690,
         "y": 60,
         "wires": []
     },
     {
-        "id": "99eca3afac980af3",
-        "type": "interval-multiples-timer",
+        "id": "8947972b820dbc88",
+        "type": "toggle",
         "z": "22ba10e510af9575",
-        "interval": "15000",
-        "payload": "",
-        "topic": "",
         "name": "",
-        "x": 140,
-        "y": 160,
+        "onOffTopic": "",
+        "onValue": "",
+        "onType": "str",
+        "offValue": "",
+        "offType": "str",
+        "toggleTopic": "",
+        "toggleValue": "",
+        "toggleType": "str",
+        "passOnOff": "",
+        "x": 430,
+        "y": 60,
         "wires": [
-            []
+            [
+                "49860a3082c2c5c9"
+            ]
         ]
-    },
-    {
-        "id": "7c46f73fe54b317a",
-        "type": "BDebug",
-        "z": "22ba10e510af9575",
-        "name": "Debug",
-        "x": 410,
-        "y": 140,
-        "wires": []
     }
 ]
