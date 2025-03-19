@@ -585,8 +585,8 @@
         "type": "BDebug",
         "z": "22ba10e510af9575",
         "name": "Debug",
-        "x": 690,
-        "y": 60,
+        "x": 330,
+        "y": 140,
         "wires": []
     },
     {
@@ -605,6 +605,33 @@
         "passOnOff": "",
         "x": 430,
         "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50d1dea1faafbebd",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 140,
         "wires": [
             [
                 "49860a3082c2c5c9"
