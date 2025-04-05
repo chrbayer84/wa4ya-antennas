@@ -583,8 +583,8 @@
         "type": "BDebug",
         "z": "22ba10e510af9575",
         "name": "Debug",
-        "x": 310,
-        "y": 140,
+        "x": 650,
+        "y": 100,
         "wires": []
     },
     {
@@ -604,7 +604,9 @@
         "x": 390,
         "y": 80,
         "wires": [
-            []
+            [
+                "49860a3082c2c5c9"
+            ]
         ]
     },
     {
@@ -626,13 +628,13 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
         "y": 140,
         "wires": [
             [
-                "49860a3082c2c5c9"
+                "8947972b820dbc88"
             ]
         ]
     }
