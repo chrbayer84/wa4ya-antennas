@@ -588,28 +588,6 @@
         "wires": []
     },
     {
-        "id": "8947972b820dbc88",
-        "type": "toggle",
-        "z": "22ba10e510af9575",
-        "name": "",
-        "onOffTopic": "",
-        "onValue": "true",
-        "onType": "bool",
-        "offValue": "false",
-        "offType": "bool",
-        "toggleTopic": "",
-        "toggleValue": "true",
-        "toggleType": "bool",
-        "passOnOff": "",
-        "x": 390,
-        "y": 80,
-        "wires": [
-            [
-                "49860a3082c2c5c9"
-            ]
-        ]
-    },
-    {
         "id": "50d1dea1faafbebd",
         "type": "inject",
         "z": "22ba10e510af9575",
@@ -634,7 +612,7 @@
         "y": 140,
         "wires": [
             [
-                "8947972b820dbc88"
+                "49860a3082c2c5c9"
             ]
         ]
     }
