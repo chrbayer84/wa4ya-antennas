@@ -15,6 +15,14 @@
         "env": []
     },
     {
+        "id": "a68276d43ff537f4",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "cc75296e115d15d4",
         "type": "subflow",
         "name": "Subflow 1",
@@ -664,5 +672,83 @@
                 "f9d007472e27a372"
             ]
         ]
+    },
+    {
+        "id": "74a84814.4ecc6",
+        "type": "inject",
+        "z": "a68276d43ff537f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "-",
+        "payload": "-",
+        "payloadType": "str",
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "d9c64d70.401e88"
+            ]
+        ]
+    },
+    {
+        "id": "d9c64d70.401e88",
+        "type": "toggle",
+        "z": "a68276d43ff537f4",
+        "name": "",
+        "onOffTopic": "",
+        "onValue": "true",
+        "onType": "bool",
+        "offValue": "false",
+        "offType": "bool",
+        "toggleTopic": "",
+        "toggleValue": "",
+        "toggleType": "any",
+        "passOnOff": "ifChanged",
+        "x": 460,
+        "y": 260,
+        "wires": [
+            [
+                "847d3703.2d63a"
+            ]
+        ]
+    },
+    {
+        "id": "847d3703.2d63a",
+        "type": "debug",
+        "z": "a68276d43ff537f4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c088c2d7.67dc1",
+        "type": "comment",
+        "z": "a68276d43ff537f4",
+        "name": "Toggle usage",
+        "info": "",
+        "x": 240,
+        "y": 200,
+        "wires": []
     }
 ]
