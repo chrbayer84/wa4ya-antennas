@@ -730,7 +730,7 @@
         "type": "function",
         "z": "22ba10e510af9575",
         "name": "function 1",
-        "func": "let reset = context.get(\"stop\");\nnode.warn(\"reset: \"+reset);\nnode.warn(\"payload: \"+msg.payload);\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\n\nreturn msg;",
+        "func": "let reset = context.get(\"stop\");\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
