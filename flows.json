@@ -605,9 +605,9 @@
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
+        "topic": "-",
+        "payload": "-",
+        "payloadType": "str",
         "x": 110,
         "y": 140,
         "wires": [
