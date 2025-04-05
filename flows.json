@@ -689,9 +689,9 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "topic": "-",
+        "payload": "-",
+        "payloadType": "str",
         "x": 270,
         "y": 740,
         "wires": [
