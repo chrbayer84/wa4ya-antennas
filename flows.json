@@ -615,5 +615,27 @@
                 "49860a3082c2c5c9"
             ]
         ]
+    },
+    {
+        "id": "f9d007472e27a372",
+        "type": "toggle",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "onOffTopic": "",
+        "onValue": "",
+        "onType": "str",
+        "offValue": "",
+        "offType": "str",
+        "toggleTopic": "",
+        "toggleValue": "",
+        "toggleType": "str",
+        "passOnOff": "",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "49860a3082c2c5c9"
+            ]
+        ]
     }
 ]
