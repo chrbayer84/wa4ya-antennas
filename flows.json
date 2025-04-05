@@ -15,14 +15,6 @@
         "env": []
     },
     {
-        "id": "a68276d43ff537f4",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "cc75296e115d15d4",
         "type": "subflow",
         "name": "Subflow 1",
@@ -619,7 +611,9 @@
         "x": 110,
         "y": 140,
         "wires": [
-            []
+            [
+                "d9c64d70.401e88"
+            ]
         ]
     },
     {
@@ -676,7 +670,7 @@
     {
         "id": "74a84814.4ecc6",
         "type": "inject",
-        "z": "a68276d43ff537f4",
+        "z": "22ba10e510af9575",
         "name": "",
         "props": [
             {
@@ -694,18 +688,16 @@
         "topic": "-",
         "payload": "-",
         "payloadType": "str",
-        "x": 230,
-        "y": 260,
+        "x": 370,
+        "y": 40,
         "wires": [
-            [
-                "d9c64d70.401e88"
-            ]
+            []
         ]
     },
     {
         "id": "d9c64d70.401e88",
         "type": "toggle",
-        "z": "a68276d43ff537f4",
+        "z": "22ba10e510af9575",
         "name": "",
         "onOffTopic": "",
         "onValue": "true",
@@ -716,8 +708,8 @@
         "toggleValue": "",
         "toggleType": "any",
         "passOnOff": "ifChanged",
-        "x": 460,
-        "y": 260,
+        "x": 610,
+        "y": 40,
         "wires": [
             [
                 "847d3703.2d63a"
@@ -727,7 +719,7 @@
     {
         "id": "847d3703.2d63a",
         "type": "debug",
-        "z": "a68276d43ff537f4",
+        "z": "22ba10e510af9575",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -737,18 +729,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 660,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "c088c2d7.67dc1",
-        "type": "comment",
-        "z": "a68276d43ff537f4",
-        "name": "Toggle usage",
-        "info": "",
-        "x": 240,
-        "y": 200,
+        "x": 850,
+        "y": 40,
         "wires": []
     }
 ]
