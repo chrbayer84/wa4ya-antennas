@@ -730,7 +730,7 @@
         "type": "function",
         "z": "22ba10e510af9575",
         "name": "function 1",
-        "func": "let reset = context.get(\"stop\");\nconsole.log(reset);\nif (reset) {\n    return null;\n}\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n    return null;\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nreturn msg;",
+        "func": "let reset = context.get(\"stop\");\nconsole.log(reset);\nif (reset) {\n    return null;\n}\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n    return null;\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nelse if (msg.payload !== \"stop\" && msg.payload !== \"start\") {\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
