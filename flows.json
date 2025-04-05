@@ -707,9 +707,7 @@
         "name": "stop",
         "props": [
             {
-                "p": "stop",
-                "v": "true",
-                "vt": "bool"
+                "p": "payload"
             }
         ],
         "repeat": "",
@@ -717,6 +715,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
         "x": 270,
         "y": 900,
         "wires": [
@@ -752,9 +752,7 @@
         "name": "start",
         "props": [
             {
-                "p": "start",
-                "v": "true",
-                "vt": "bool"
+                "p": "payload"
             }
         ],
         "repeat": "",
@@ -762,6 +760,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "start",
+        "payloadType": "str",
         "x": 270,
         "y": 820,
         "wires": [
