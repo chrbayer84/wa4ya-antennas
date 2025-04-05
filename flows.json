@@ -602,9 +602,7 @@
         "x": 110,
         "y": 140,
         "wires": [
-            [
-                "d9c64d70.401e88"
-            ]
+            []
         ]
     },
     {
@@ -648,8 +646,8 @@
         "toggleValue": "",
         "toggleType": "any",
         "passOnOff": "ifChanged",
-        "x": 610,
-        "y": 40,
+        "x": 790,
+        "y": 740,
         "wires": [
             [
                 "847d3703.2d63a"
@@ -669,8 +667,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 850,
-        "y": 40,
+        "x": 1030,
+        "y": 740,
         "wires": []
     },
     {
@@ -728,22 +726,6 @@
         ]
     },
     {
-        "id": "533ba1b6.851f58",
-        "type": "debug",
-        "z": "22ba10e510af9575",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 740,
-        "wires": []
-    },
-    {
         "id": "3b1d0ace.904dae",
         "type": "trigger",
         "z": "22ba10e510af9575",
@@ -764,7 +746,7 @@
         "y": 740,
         "wires": [
             [
-                "533ba1b6.851f58"
+                "d9c64d70.401e88"
             ]
         ]
     }
