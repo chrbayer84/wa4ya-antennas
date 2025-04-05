@@ -675,7 +675,7 @@
         "id": "54fcb3ec.12b7c4",
         "type": "inject",
         "z": "22ba10e510af9575",
-        "name": "start",
+        "name": "interval",
         "props": [
             {
                 "p": "payload"
@@ -692,7 +692,7 @@
         "topic": "-",
         "payload": "-",
         "payloadType": "str",
-        "x": 270,
+        "x": 280,
         "y": 740,
         "wires": [
             [
@@ -704,10 +704,10 @@
         "id": "55aca3bf.f5054c",
         "type": "inject",
         "z": "22ba10e510af9575",
-        "name": "reset",
+        "name": "stop",
         "props": [
             {
-                "p": "reset",
+                "p": "stop",
                 "v": "true",
                 "vt": "bool"
             }
@@ -718,7 +718,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 270,
-        "y": 800,
+        "y": 900,
         "wires": [
             [
                 "193c74a9d309c02d"
@@ -730,7 +730,7 @@
         "type": "function",
         "z": "22ba10e510af9575",
         "name": "function 1",
-        "func": "if (msg.payload !== \"reset\") {\n    return msg;\n} else {\n    return null;\n}",
+        "func": "let reset = context.get(\"stop\");\nif (reset) {\n    return null;\n}\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -742,6 +742,31 @@
         "wires": [
             [
                 "d9c64d70.401e88"
+            ]
+        ]
+    },
+    {
+        "id": "d7683bf472fbe6f5",
+        "type": "inject",
+        "z": "22ba10e510af9575",
+        "name": "start",
+        "props": [
+            {
+                "p": "start",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 820,
+        "wires": [
+            [
+                "193c74a9d309c02d"
             ]
         ]
     }
