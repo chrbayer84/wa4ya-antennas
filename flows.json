@@ -305,7 +305,7 @@
         "y": 700,
         "wires": [
             [
-                "193c74a9d309c02d"
+                "e1c9c145990728cb"
             ]
         ]
     },
@@ -498,5 +498,22 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "e1c9c145990728cb",
+        "type": "debug",
+        "z": "22ba10e510af9575",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 860,
+        "y": 620,
+        "wires": []
     }
 ]
