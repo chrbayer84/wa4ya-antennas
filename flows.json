@@ -377,7 +377,7 @@
         "toggleValue": "",
         "toggleType": "any",
         "passOnOff": "ifChanged",
-        "x": 790,
+        "x": 850,
         "y": 740,
         "wires": [
             [
@@ -432,7 +432,7 @@
         "type": "function",
         "z": "22ba10e510af9575",
         "name": "function 1",
-        "func": "let reset = context.get(\"stop\");\nnode.error(msg.payload);\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\nconst delay = ms => new Promise(resolve => setTimeout(resolve, ms))\nawait delay(1000) /// waiting 1 second.\nreturn msg;",
+        "func": "let reset = context.get(\"stop\");\nnode.error(msg.payload);\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -443,7 +443,7 @@
         "y": 760,
         "wires": [
             [
-                "d9c64d70.401e88"
+                "167a31a81abfbfad"
             ]
         ]
     },
@@ -497,6 +497,31 @@
         "y": 360,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "167a31a81abfbfad",
+        "type": "delay",
+        "z": "22ba10e510af9575",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 760,
+        "wires": [
+            [
+                "d9c64d70.401e88"
+            ]
         ]
     }
 ]
