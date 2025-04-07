@@ -432,7 +432,7 @@
         "type": "function",
         "z": "22ba10e510af9575",
         "name": "function 1",
-        "func": "let reset = context.get(\"stop\");\nnode.error(msg.payload);\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\n\nreturn msg;",
+        "func": "let reset = context.get(\"stop\");\nnode.error(msg.payload);\n\nconst ticks = [14, 29, 44, 59];\nconst now = new Date();\nconst seconds = now.getSeconds();\n\nlet nextTick;\nticks.forEach(function (value) {\n    //console.log(seconds);\n    console.log(value - seconds);\n    if (value - seconds < 15){\n        nextTick = value;\n    } \n});\n\n\nvar interval = \"\";\nvar timer;\n\nvar timeHandler = function() {\n//    node.send({payload: config.payload || Date.now()});\n//    timer = setTimeout(timeHandler, interval - (Date.now() %interval));  // setInterval apparently has a considerable drift, so we use setTimeout to stay within the time grid as much as possible\n};\n\n//timer = setTimeout(timeHandler, interval - (Date.now() %interval));        \n\n\n\n\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\n\n\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
