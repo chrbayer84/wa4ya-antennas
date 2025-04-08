@@ -432,7 +432,7 @@
         "type": "function",
         "z": "22ba10e510af9575",
         "name": "function 1",
-        "func": "let reset = context.get(\"stop\");\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\n\nconst ticks = [14, 29, 44, 59];\nconst now = new Date();\nconst seconds = now.getSeconds();\n\nlet nextTick = 0;\nticks.forEach(function (value) {\n    if (value - seconds < 15){\n        nextTick = value;\n    }\n});\n\nnode.error(\"current time: \" + now);\n\nlet waitTime = nextTick - seconds;\nawait new Promise(resolve => setTimeout(resolve, waitTime));\n\nnode.error(\"after wait now time: \" + new Date());\n\nreturn msg;",
+        "func": "let reset = context.get(\"stop\");\n\nif (msg.payload === \"start\") {\n    context.set(\"stop\", null);\n} else if (msg.payload === \"stop\") {\n    context.set(\"stop\", true);\n    return null;\n}\nif (reset || reset === undefined) {\n    return null;\n}\n\nconst ticks = [14, 29, 44, 59];\nconst now = new Date();\nconst seconds = now.getSeconds();\n\nlet nextTick = 0;\nticks.forEach(function (value) {\n    if (value - seconds < 15){\n        nextTick = value;\n    }\n});\n\nnode.error(\"current time: \" + now);\nnode.error(\"nextTick: \" + nextTick);\n\nlet waitTime = nextTick - seconds;\nawait new Promise(resolve => setTimeout(resolve, waitTime));\n\nnode.error(\"after wait now time: \" + new Date());\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
